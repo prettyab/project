@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <style>
+    body {
+      background-image: url("{% static 'employe.jpg' %}");
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      margin: 0; /* Remove default margin */
+      font-family: Arial, sans-serif; /* Choose a suitable font */
+    }
+
+    nav {
+      background-color: #333; /* Set a dark background color for the navigation bar */
+      overflow: hidden; /* Clear floats */
+      position: fixed; /* Fix the navigation bar at the top of the page */
+      width: 100%;
+    }
+
+    nav a {
+      float: left; /* Float the links to the left */
+      display: block;
+      color: #f2f2f2; /* Text color for the links */
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd; /* Add a grey background on hover */
+      color: black; /* Change text color on hover */
+    }
+
+    .Container {
+      margin-top: 60px; /* Add margin to the container to avoid overlapping with the fixed navigation bar */
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      border-radius: 10px; /* Add rounded corners */
+      width: 300px;
+      margin: auto; /* Center the container */
+    }
+
+    form {
+      /* Add styling for your form elements */
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="active" href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Services</a>
+    <a href="{% url 'register' %}">Register</a>
+  </nav>
+
+  <div class="Container">
+    <form>
+      <!-- Add your form elements here -->
+    </form>
+  </div>
+</body>
+</html>
